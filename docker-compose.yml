@@ -1,0 +1,19 @@
+version: '2'
+services:
+  php-apache-dev:
+    image: webdevops/php-apache-dev
+    ports:
+      - '80'
+    environment:
+      - WEB_DOCUMENT_ROOT=/app/public
+    volumes:
+      - './:/app'
+    links:
+      - 'mariadb:db'
+  mariadb:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=demo1234
+      - MYSQL_DATABASE=laravel
+    volumes:
+      - './mysql:/var/lib/mysql'
