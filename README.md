@@ -11,6 +11,8 @@ This test project
 
 Guide for deploy: 
 
+clone with: https://github.com/punks88/intent.git
+
 1. Run docker-compose up -d 
 2. Added in your file hosts new row with <ip-docker-container> blog.loc
 2. Create database in docker container and config db name in env file
